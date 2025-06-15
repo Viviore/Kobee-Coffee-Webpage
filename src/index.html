@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Remix Icons-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <link href="./output.css" rel="stylesheet" />
+    <link rel="icon" href="/01_Kopee_Tailwind/img/Icon.png" />
+    <title>Kopee Homepage</title>
+    <style>
+      .sr-animating {
+        pointer-events: none !important;
+      }
+      .home__image {
+        transform-origin: center !important;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <header id="navbar" class="fixed top-0 left-0 z-50 w-full">
+      <nav
+        class="flex items-center justify-between w-full h-20 sm:h-16 px-10 py-5 sm:px-10.5 shadow-md transition-colors duration-500"
+      >
+        <div
+          class="text-5xl font-bold text-white sm:text-4xl transition-colors duration-500"
+        >
+          Kopee.
+        </div>
+
+        <div
+          id="nav-menu"
+          class="absolute top-0 left-[100%] min-h-[80vh] w-full bg-[#815328]/80 backdrop-blur-sm flex items-center justify-center sm:justify-end overflow-hidden sm:static sm:bg-transparent sm:backdrop-blur-none sm:min-h-fit sm:w-auto duration-500"
+        >
+          <ul class="flex flex-col items-center gap-8 sm:flex-row">
+            <li>
+              <a
+                href="#home"
+                class="nav-link text-2xl sm:text-lg font-bold sm:font-semibold transition-colors duration-500 text-white hover:text-[#1b1b1b]"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#about"
+                class="nav-link text-2xl sm:text-lg font-bold sm:font-semibold transition-colors duration-500 text-white hover:text-[#1b1b1b]"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#products"
+                class="nav-link text-2xl sm:text-lg font-bold sm:font-semibold transition-colors duration-500 text-white hover:text-[#1b1b1b]"
+                >Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="#reviews"
+                class="nav-link text-2xl sm:text-lg font-bold sm:font-semibold transition-colors duration-500 text-white hover:text-[#1b1b1b]"
+                >Reviews</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <!-- Menu Icon/Hamburger -->
+        <div
+          class="text-white sm:text-[#1b1b1b] text-3xl cursor-pointer z-50 transition-colors duration-500 sm:hidden"
+        >
+          <i class="ri-menu-line" id="hamburger"></i>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Home -->
+    <section
+      id="home"
+      class="pt-20 sm:pt-16 h-[100vh] flex justify-center bg-white bg-[url('/01_Kopee_Tailwind/img/background-sm-1.png')] sm:bg-[url('/01_Kopee_Tailwind/img/background-md-1.png')] lg:bg-[url('/01_Kopee_Tailwind/img/Background-lg-1.png')] bg-cover bg-center"
+    >
+      <div class="container flex items-center justify-center px-4 mx-auto">
+        <div
+          class="home__content flex flex-col items-center justify-center gap-5 md:flex-row"
+        >
+          <!-- Conent -->
+          <div
+            class="home__content order-2 w-full space-y-5 md:order-none sm:1/2"
+          >
+            <h1
+              class="text-[#1b1b1b] font-bold text-5xl sm:text-5xl md:text-6xl"
+            >
+              Start your day with<br />
+              <span class="text-[#815328]">Fresh Coffee.</span>
+            </h1>
+
+            <p class="text-[#1b1b1b]">
+              Coffee is a popular and beloved beverage enjoyed by people around
+              the world. Awaken your senses with a steaming hot Coffee.
+            </p>
+
+            <div class="flex flex-col">
+              <button
+                class="btn md:w-2xs border-2 bg-transparent hover:bg-[#815328] text-[#815328] font-semibold hover:text-white border-[#815328] rounded-md px-3 py-2 hover:opacity-90 duration-500 cursor-pointer"
+              >
+                Order Now
+              </button>
+            </div>
+
+            <div class="flex items-center gap-5 mb-5 text-3xl sm:text-2xl">
+              <i
+                class="ri-facebook-fill hover:text-white hover:bg-[#815328] hover:p-3 hover:rounded-full duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-twitter-x-fill hover:text-white hover:bg-[#815328] hover:p-3 hover:rounded-full duration-300 cursor-pointer"
+              ></i>
+              <i
+                class="ri-instagram-line hover:text-white hover:bg-[#815328] hover:p-3 hover:rounded-full duration-300 cursor-pointer"
+              ></i>
+            </div>
+          </div>
+
+          <!-- Image -->
+          <div
+            class="home__image relative order-1 w-full px-4 md:order-none md:w-full"
+          >
+            <img
+              src="../img/Subject.png"
+              alt="home_image"
+              class="object-contain w-full h-auto"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section
+      id="about"
+      class="relative py-16 sm:py-20 md:py-25 px-4 sm:px-6 md:px-10 lg:px-20 bg-[#815328] overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-[url('../img/coffee-pattern.png')] before:opacity-5 before:pointer-events-none"
+    >
+      <div
+        class="flex flex-col items-center justify-center gap-2 sm:gap-3 mb-12 sm:mb-16 md:mb-20 text-center"
+      >
+        <h2
+          class="about__head text-3xl sm:text-4xl lg:text-5xl font-bold text-white relative after:content-[''] after:absolute after:-bottom-3 sm:after:-bottom-4 after:left-1/2 after:-translate-x-1/2 after:w-24 sm:after:w-32 md:after:w-40 after:h-0.5 sm:after:h-1 after:bg-white/30 after:rounded-full"
+        >
+          About Our Company
+        </h2>
+      </div>
+
+      <div
+        class="space-y-16 sm:space-y-20 md:space-y-24 contain-content p-4 sm:p-6 md:p-10"
+      >
+        <!-- Item 1 -->
+        <div
+          class="flex flex-col items-center justify-center gap-8 sm:gap-12 md:gap-16 md:flex-row group/item hover:scale-[1.02] transition-transform duration-500"
+        >
+          <!-- Image -->
+          <div
+            class="w-full md:w-1/2 transform transition-all duration-500 group-hover/item:-translate-x-2"
+          >
+            <img
+              src="../img/About1.jpg"
+              alt="about_image"
+              class="about__image1 w-[85%] sm:w-3/4 md:w-[85%] mx-auto rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300 group-hover/item:shadow-black/30"
+            />
+          </div>
+
+          <!-- Content -->
+          <div
+            class="w-full mt-6 sm:mt-8 md:mt-0 md:w-1/2 transform transition-all duration-500 group-hover/item:translate-x-2"
+          >
+            <div class="about__contents1 space-y-3 sm:space-y-4 md:space-y-5">
+              <h3
+                class="text-lg sm:text-xl md:text-2xl font-semibold text-white relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-48 sm:after:w-64 md:after:w-80 after:h-0.5 after:bg-white/30"
+              >
+                We Offer Premium Coffee
+              </h3>
+              <p
+                class="text-justify text-sm sm:text-base text-white/90 leading-relaxed"
+              >
+                At Kopee, we are passionate about delivering a premium coffee
+                experience that begins with carefully selected beans. Our coffee
+                is made from high-quality, ethically sourced beans, roasted in
+                small batches to preserve flavor, freshness, and character.
+                Every cup is a product of precision and love, bold, rich, and
+                deeply satisfying.
+                <br /><br />
+                We believe that coffee isn't just a beverage, it's a craft. From
+                the first grind to the final pour, our baristas ensure that each
+                cup brings out the best in every bean. Whether you prefer a
+                classic brew or an adventurous blend, Kopee promises a smooth
+                and memorable experience that energizes your day.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div
+          class="flex flex-col items-center justify-center gap-8 sm:gap-12 md:gap-16 md:flex-row-reverse group/item hover:scale-[1.02] transition-transform duration-500"
+        >
+          <!-- Image -->
+          <div
+            class="w-full md:w-1/2 transform transition-all duration-500 group-hover/item:translate-x-2"
+          >
+            <img
+              src="../img/About2.jpg"
+              alt="about_image"
+              class="about__image2 w-[85%] sm:w-3/4 md:w-[85%] mx-auto rounded-lg shadow-lg hover:shadow-lg transition-shadow duration-300 group-hover/item:shadow-black/30"
+            />
+          </div>
+
+          <!-- Content -->
+          <div
+            class="w-full mt-6 sm:mt-8 md:mt-0 md:w-1/2 transform transition-all duration-500 group-hover/item:-translate-x-2"
+          >
+            <div class="about__contents2 space-y-3 sm:space-y-4 md:space-y-5">
+              <h3
+                class="text-lg sm:text-xl md:text-2xl font-semibold text-white relative inline-block after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-48 sm:after:w-64 md:after:w-80 after:h-0.5 after:bg-white/30"
+              >
+                More Than Just a Drink
+              </h3>
+              <p
+                class="text-justify text-sm sm:text-base text-white/90 leading-relaxed"
+              >
+                Kopee is more than just a coffee brand. It's a space where
+                people connect, unwind, and find comfort. Our cozy interiors,
+                warm ambiance, and friendly service are all designed to create a
+                welcoming environment where anyone can feel at home. We're here
+                not just to serve coffee but to create moments.
+                <br /><br />
+                Whether you're catching up with friends, working on your passion
+                project, or simply taking a pause, Kopee is your perfect spot.
+                We aim to turn a simple coffee break into a meaningful
+                experience. One cup, one connection, one moment at a time.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products -->
+    <section
+      id="products"
+      class="flex items-center justify-center w-full min-h-screen px-6 py-20 overflow-hidden bg-white md:px-20 md:py-24"
+    >
+      <div class="flex flex-col items-center justify-center w-full">
+        <div class="mb-12 text-center">
+          <h2 class="products__head text-4xl font-bold text-[#815328]">
+            The Coffee Collection
+          </h2>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid w-full gap-y-10 gap-x-5 sm:grid-cols-2 lg:grid-cols-4">
+          <!-- Card 1 -->
+          <div
+            class="products__card1 relative p-10 transition-all duration-300 h-fit group hover:scale-105"
+          >
+            <div
+              class="flex flex-col items-center justify-center p-2.5 rounded-md shadow-md bg-gradient-to-br from-gray-200 via-gray-50 to-gray-200"
+            >
+              <img
+                src="../img/products/1.png"
+                alt="product_image"
+                class="w-56 mt-10"
+              />
+              <button
+                class="cursor-pointer w-full px-2 py-1 text-xl font-semibold text-white duration-300 translate-y-2 rounded-md opacity-0 bg-[#815328] hover:opacity-90 group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                View More
+              </button>
+            </div>
+
+            <!-- Content -->
+            <h3
+              class="text-xl font-semibold md:text-2xl text-[#815328] cursor-pointer"
+            >
+              Liberica Coffee Beans
+            </h3>
+            <p class="text-justify cursor-pointer text-[#1b1b1b]">
+              Delicately roasted to preserve origin flavors, this light roast
+              offers floral notes and a crisp, fruity finish.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="products__card2 relative p-10 transition-all duration-300 h-fit group hover:scale-105"
+          >
+            <div
+              class="flex flex-col items-center justify-center p-2.5 rounded-md shadow-md bg-gradient-to-br from-gray-200 via-gray-50 to-gray-200"
+            >
+              <img
+                src="../img/products/2.png"
+                alt="product_image"
+                class="w-56 mt-10"
+              />
+              <button
+                class="cursor-pointer w-full px-2 py-1 text-xl font-semibold text-white duration-300 translate-y-2 rounded-md opacity-0 bg-[#815328] hover:opacity-90 group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                View More
+              </button>
+            </div>
+
+            <!-- Content -->
+            <h3
+              class="text-xl font-semibold md:text-2xl text-[#815328] cursor-pointer"
+            >
+              Robusta Coffee Beans
+            </h3>
+            <p class="text-justify cursor-pointer text-[#1b1b1b]">
+              Rich and smooth, this medium roast balances bright acidity with
+              sweet, nutty undertones for a classic.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="products__card3 relative p-10 transition-all duration-300 h-fit group hover:scale-105"
+          >
+            <div
+              class="flex flex-col items-center justify-center p-2.5 rounded-md shadow-md bg-gradient-to-br from-gray-200 via-gray-50 to-gray-200"
+            >
+              <img
+                src="../img/products/3.png"
+                alt="product_image"
+                class="w-56 mt-10"
+              />
+              <button
+                class="cursor-pointer w-full px-2 py-1 text-xl font-semibold text-white duration-300 translate-y-2 rounded-md opacity-0 bg-[#815328] hover:opacity-90 group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                View More
+              </button>
+            </div>
+
+            <!-- Content -->
+            <h3
+              class="text-xl font-semibold md:text-2xl text-[#815328] cursor-pointer"
+            >
+              Bourbon Coffee Beans
+            </h3>
+            <p class="text-justify cursor-pointer text-[#1b1b1b]">
+              Robust and intense, this dark roast offers a full-bodied flavor
+              with hints of dark chocolate and a lingering, toasty finish.
+            </p>
+          </div>
+
+          <!-- Card 4 -->
+          <div
+            class="products__card4 relative p-10 transition-all duration-300 h-fit group hover:scale-105"
+          >
+            <div
+              class="flex flex-col items-center justify-center p-2.5 rounded-md shadow-md bg-gradient-to-br from-gray-200 via-gray-50 to-gray-200"
+            >
+              <img
+                src="../img/products/4.png"
+                alt="product_image"
+                class="w-56 mt-10"
+              />
+              <button
+                class="cursor-pointer w-full px-2 py-1 text-xl font-semibold text-white duration-300 translate-y-2 rounded-md opacity-0 bg-[#815328] hover:opacity-90 group-hover:opacity-100 group-hover:translate-y-0"
+              >
+                View More
+              </button>
+            </div>
+
+            <!-- Content -->
+            <h3
+              class="text-xl font-semibold md:text-2xl text-[#815328] cursor-pointer"
+            >
+              Arabica Coffee Beans
+            </h3>
+            <p class="text-justify cursor-pointer text-[#1b1b1b]">
+              Robust and intense, this dark roast offers a full-bodied flavor
+              with hints of dark chocolate and a lingering, toasty finish.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section
+      id="reviews"
+      class="relative flex items-center justify-center w-full min-h-screen bg-white overflow-visible bg-[url('/01_Kopee_Tailwind/img/background-sm.png')] sm:bg-[url('/01_Kopee_Tailwind/img/background-md.png')] lg:bg-[url('/01_Kopee_Tailwind/img/Background-lg.png')] bg-cover bg-center"
+    >
+      <div class="w-full sm:w-12xl h-auto max-w-6xl mx-auto p-10">
+        <div class="mb-16 text-center">
+          <h2 class="reviews__head text-4xl font-bold text-[#815328]">
+            Our Customer Reviews
+          </h2>
+        </div>
+
+        <!-- Navigation Container -->
+        <div class="reviews_container relative w-full">
+          <!-- Prev Arrow -->
+          <div
+            class="absolute top-30 -translate-y-1/2 -left-12 md:-left-16 z-20"
+          >
+            <div
+              class="swiper-button-prev !static !mt-0 !text-[#815328] after:!text-3xl opacity-0 md:opacity-100 transition-opacity duration-300"
+            ></div>
+          </div>
+
+          <!-- Next Arrow -->
+          <div
+            class="absolute top-30 -translate-y-1/2 -right-12 md:-right-16 z-20"
+          >
+            <div
+              class="swiper-button-next !static !mt-0 !text-[#815328] after:!text-3xl opacity-0 md:opacity-100 transition-opacity duration-300"
+            ></div>
+          </div>
+
+          <!-- Swiper -->
+          <div
+            class="relative p-12 h-80 sm:h-80 md:h-[340px] swiper reviewSwiper"
+          >
+            <div class="swiper-wrapper">
+              <!-- Review 1 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex flex-col p-6 mx-4 bg-[#815328] rounded-lg shadow-lg"
+                >
+                  <div class="text-white">
+                    <i class="text-2xl ri-double-quotes-l"></i>
+                    <p class="my-4 text-base text-justify line-clamp-3">
+                      "The ambiance here is unmatched! The baristas are
+                      incredibly skilled and friendly. Their signature blend is
+                      perfect."
+                    </p>
+                    <i class="float-right text-2xl ri-double-quotes-r"></i>
+                  </div>
+                  <div class="mt-4">
+                    <p class="text-lg font-bold text-white">Vien Nulada</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 2 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex flex-col p-6 mx-4 bg-[#815328] rounded-lg shadow-lg"
+                >
+                  <div class="text-white">
+                    <i class="text-2xl ri-double-quotes-l"></i>
+                    <p class="my-4 text-base text-justify line-clamp-3">
+                      "Exceptional coffee and service! Their pour-over coffee is
+                      a must-try. The flavors are so distinct and perfectly
+                      crafted."
+                    </p>
+                    <i class="float-right text-2xl ri-double-quotes-r"></i>
+                  </div>
+                  <div class="mt-4">
+                    <p class="text-lg font-bold text-white">Ray Cadamia</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 3 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex flex-col p-6 mx-4 bg-[#815328] rounded-lg shadow-lg"
+                >
+                  <div class="text-white">
+                    <i class="text-2xl ri-double-quotes-l"></i>
+                    <p class="my-4 text-base text-justify line-clamp-3">
+                      "The consistency is remarkable here. Their espresso drinks
+                      are perfectly crafted, and seasonal specialties are always
+                      creative."
+                    </p>
+                    <i class="float-right text-2xl ri-double-quotes-r"></i>
+                  </div>
+                  <div class="mt-4">
+                    <p class="text-lg font-bold text-white">Brian Tejada</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 4 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex flex-col p-6 mx-4 bg-[#815328] rounded-lg shadow-lg"
+                >
+                  <div class="text-white">
+                    <i class="text-2xl ri-double-quotes-l"></i>
+                    <p class="my-4 text-base text-justify line-clamp-3">
+                      "What a discovery! Their cold brew is the best in town.
+                      The atmosphere is perfect for both work and for
+                      relaxation."
+                    </p>
+                    <i class="float-right text-2xl ri-double-quotes-r"></i>
+                  </div>
+                  <div class="mt-4">
+                    <p class="text-lg font-bold text-white">Barth Sercena</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Review 5 -->
+              <div class="swiper-slide">
+                <div
+                  class="flex flex-col p-6 mx-4 bg-[#815328] rounded-lg shadow-lg"
+                >
+                  <div class="text-white">
+                    <i class="text-2xl ri-double-quotes-l"></i>
+                    <p class="my-4 text-base text-justify line-clamp-3">
+                      "Kopee has mastered quality and comfort. Their latte art
+                      is Instagram-worthy, and the taste keeps me coming back."
+                    </p>
+                    <i class="float-right text-2xl ri-double-quotes-r"></i>
+                  </div>
+                  <div class="mt-4">
+                    <p class="text-lg font-bold text-white">Van Autida</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pagination -->
+            <div
+              class="swiper-pagination !bottom-0 [&>.swiper-pagination-bullet]:!bg-gray-600 [&>.swiper-pagination-bullet-active]:!bg-[#815328]"
+            ></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+
+    <footer class="bg-[#815328] text-white pt-10 pb-4 relative">
+      <!-- Socials -->
+      <div class="container mx-auto px-4 mb-6">
+        <div class="border-b border-white pb-4">
+          <div class="flex justify-center items-center gap-6 text-2xl">
+            <a href="#" aria-label="Facebook">
+              <i class="ri-facebook-fill hover:text-[#1b1b1b] duration-300"></i>
+            </a>
+            <a href="#" aria-label="Twitter">
+              <i
+                class="ri-twitter-x-fill hover:text-[#1b1b1b] duration-300"
+              ></i>
+            </a>
+            <a href="#" aria-label="Instagram">
+              <i
+                class="ri-instagram-line hover:text-[#1b1b1b] duration-300"
+              ></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Footer Content Grid -->
+        <div
+          class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 text-center md:text-left mt-10 px-2"
+        >
+          <!-- Kopee Logo -->
+          <div>
+            <h3 class="text-3xl font-bold mb-3">Kopee.</h3>
+            <p>Your daily brew companion.</p>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <p class="mb-4 font-bold text-xl">Quick Links</p>
+            <div class="flex flex-col gap-1">
+              <a href="#" class="hover:text-[#1b1b1b] duration-300"
+                >Refund Policy</a
+              >
+              <a href="#" class="hover:text-[#1b1b1b] duration-300"
+                >Privacy Policy</a
+              >
+              <a href="#" class="hover:text-[#1b1b1b] duration-300"
+                >Terms of Service</a
+              >
+              <a href="#" class="hover:text-[#1b1b1b] duration-300"
+                >Support Center</a
+              >
+            </div>
+          </div>
+
+          <!-- Popular Services -->
+          <div>
+            <p class="mb-4 font-bold text-xl">Popular Services</p>
+            <div class="flex flex-col gap-1">
+              <a href="#" class="hover:text-[#1b1b1b] duration-300"
+                >Community Projects</a
+              >
+              <a href="#" class="hover:text-[#1b1b1b] duration-300"
+                >Loyalty Program</a
+              >
+              <a href="#" class="hover:text-[#1b1b1b] duration-300"
+                >Product Retails</a
+              >
+              <a href="#" class="hover:text-[#1b1b1b] duration-300"
+                >Branch Locator</a
+              >
+            </div>
+          </div>
+
+          <!-- Contact Us -->
+          <div>
+            <p class="mb-4 font-bold text-xl">Contact Us</p>
+            <div class="flex flex-col gap-1">
+              <a href="tel:+639762155000">+63 976 215 5000</a>
+              <a href="mailto:kopee@gmail.com">kopee@gmail.com</a>
+              <p class="mt-2">Maramag, Bukidnon, Philippines 8714</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="mt-8 text-center border-t border-white pt-4 text-sm">
+          <p>&copy; 2025 Barth Sercena. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scroll Up Button -->
+    <a
+      href="#home"
+      class="fixed right-6 bottom-4 opacity-0 pointer-events-none transition-all duration-300 ease-in-out w-16 h-16 bg-white shadow-[0_4px_12px_rgba(0,0,0,0.25)] flex items-center justify-center rounded-full text-4xl z-50"
+      id="scroll-up"
+    >
+      <i class="ri-arrow-up-s-line"></i>
+    </a>
+
+    <!-- Javascript Main -->
+    <script src="main.js"></script>
+
+    <!-- Scroll Reveal -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!-- Swiper JS -->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper inside HTML -->
+    <script>
+      const swiper = new Swiper(".reviewSwiper", {
+        speed: 400,
+        spaceBetween: 30,
+        slidesPerView: 1,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        grabCursor: true,
+        breakpoints: {
+          641: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+
+    <!-- Scroll Reveal -->
+    <script>
+      // Home: Contents
+      ScrollReveal().reveal(".home__content", {
+        duration: 900,
+        delay: 100,
+        origin: "left",
+        distance: "60px",
+        opacity: 0,
+        easing: "ease-in-out",
+        reset: true,
+      });
+
+      // Home: Image
+      ScrollReveal().reveal(".home__image", {
+        duration: 900,
+        delay: 100,
+        origin: "right",
+        scale: 0.5,
+        distance: "60px",
+        opacity: 0,
+        easing: "ease-in-out",
+        reset: true,
+      });
+
+      // About: Header
+      ScrollReveal().reveal(".about__head", {
+        duration: 800,
+        delay: 100,
+        origin: "top",
+        distance: "40px",
+        opacity: 0,
+        easing: "ease-in-out",
+        reset: true,
+      });
+
+      // About 1: Image
+      ScrollReveal().reveal(".about__image1", {
+        duration: 900,
+        delay: 200,
+        origin: "left",
+        distance: "60px",
+        opacity: 0,
+        easing: "ease-in-out",
+        reset: true,
+      });
+
+      // About 1: Contents
+      ScrollReveal().reveal(".about__contents1", {
+        duration: 900,
+        delay: 350,
+        origin: "right",
+        distance: "60px",
+        opacity: 0,
+        easing: "ease-in-out",
+        reset: true,
+      });
+
+      // About 2: Image
+      ScrollReveal().reveal(".about__image2", {
+        duration: 900,
+        delay: 500,
+        origin: "left",
+        distance: "60px",
+        opacity: 0,
+        easing: "ease-in-out",
+        reset: true,
+      });
+
+      // About 2: Contents
+      ScrollReveal().reveal(".about__contents2", {
+        duration: 900,
+        delay: 650,
+        origin: "right",
+        distance: "60px",
+        opacity: 0,
+        easing: "ease-in-out",
+        reset: true,
+      });
+
+      // Products: Header
+      ScrollReveal().reveal(".products__head", {
+        duration: 800,
+        delay: 100,
+        origin: "top",
+        distance: "40px",
+        opacity: 0,
+        easing: "ease-in-out",
+        reset: true,
+      });
+
+      // Products: Cards (staggered)
+      const productCards = [
+        ".products__card1",
+        ".products__card2",
+        ".products__card3",
+        ".products__card4",
+      ];
+      productCards.forEach((selector, i) => {
+        ScrollReveal().reveal(selector, {
+          duration: 900,
+          delay: 200 + i * 120,
+          origin: "top",
+          distance: "50px",
+          opacity: 0,
+          easing: "ease-in-out",
+          reset: true,
+        });
+
+        // Reviews: Header
+        ScrollReveal().reveal(".reviews__head", {
+          duration: 800,
+          delay: 100,
+          origin: "top",
+          distance: "40px",
+          opacity: 0,
+          easing: "ease-in-out",
+          reset: true,
+        });
+
+        // Reviews: Container
+        ScrollReveal().reveal(".reviews__container", {
+          duration: 900,
+          delay: 200,
+          origin: "top",
+          distance: "40px",
+          opacity: 0,
+          easing: "ease-in-out",
+          reset: true,
+        });
+      });
+    </script>
+  </body>
+</html>
