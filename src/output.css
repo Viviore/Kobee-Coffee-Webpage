@@ -210,6 +210,9 @@
   .relative {
     position: relative;
   }
+  .static {
+    position: static;
+  }
   .top-0 {
     top: calc(var(--spacing) * 0);
   }
@@ -336,6 +339,9 @@
   .inline-block {
     display: inline-block;
   }
+  .table {
+    display: table;
+  }
   .h-16 {
     height: calc(var(--spacing) * 16);
   }
@@ -375,6 +381,13 @@
   .max-w-6xl {
     max-width: var(--container-6xl);
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .-translate-y-1 {
+    --tw-translate-y: calc(var(--spacing) * -1);
+    translate: var(--tw-translate-x) var(--tw-translate-y);
+  }
   .-translate-y-1\/2 {
     --tw-translate-y: calc(calc(1/2 * 100%) * -1);
     translate: var(--tw-translate-x) var(--tw-translate-y);
@@ -388,6 +401,9 @@
   }
   .cursor-pointer {
     cursor: pointer;
+  }
+  .resize {
+    resize: both;
   }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -464,6 +480,10 @@
   .rounded-md {
     border-radius: var(--radius-md);
   }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
   .border-2 {
     border-style: var(--tw-border-style);
     border-width: 2px;
@@ -498,6 +518,12 @@
     --tw-gradient-position: to bottom right in oklab;
     background-image: linear-gradient(var(--tw-gradient-stops));
   }
+  .bg-\[url\(\'\.\/img\/background-sm-1\.png\'\)\] {
+    background-image: url('./img/background-sm-1.png');
+  }
+  .bg-\[url\(\'\.\/img\/background-sm\.png\'\)\] {
+    background-image: url('./img/background-sm.png');
+  }
   .bg-\[url\(\'\/01_Kopee_Tailwind\/img\/background-sm-1\.png\'\)\] {
     background-image: url('/01_Kopee_Tailwind/img/background-sm-1.png');
   }
@@ -525,6 +551,9 @@
   }
   .object-contain {
     object-fit: contain;
+  }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
   }
   .p-2\.5 {
     padding: calc(var(--spacing) * 2.5);
@@ -651,6 +680,9 @@
       color: color-mix(in oklab, var(--color-white) 90%, transparent);
     }
   }
+  .underline {
+    text-decoration-line: underline;
+  }
   .opacity-0 {
     opacity: 0%;
   }
@@ -669,8 +701,16 @@
     --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
     box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
+  .outline {
+    outline-style: var(--tw-outline-style);
+    outline-width: 1px;
+  }
   .backdrop-blur-sm {
     --tw-backdrop-blur: blur(var(--blur-sm));
+    -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+    backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
+  }
+  .backdrop-filter {
     -webkit-backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
     backdrop-filter: var(--tw-backdrop-blur,) var(--tw-backdrop-brightness,) var(--tw-backdrop-contrast,) var(--tw-backdrop-grayscale,) var(--tw-backdrop-hue-rotate,) var(--tw-backdrop-invert,) var(--tw-backdrop-opacity,) var(--tw-backdrop-saturate,) var(--tw-backdrop-sepia,);
   }
@@ -1054,6 +1094,16 @@
       background-color: transparent;
     }
   }
+  .sm\:bg-\[url\(\'\.\/img\/background-md-1\.png\'\)\] {
+    @media (width >= 40rem) {
+      background-image: url('./img/background-md-1.png');
+    }
+  }
+  .sm\:bg-\[url\(\'\.\/img\/background-md\.png\'\)\] {
+    @media (width >= 40rem) {
+      background-image: url('./img/background-md.png');
+    }
+  }
   .sm\:bg-\[url\(\'\/01_Kopee_Tailwind\/img\/background-md-1\.png\'\)\] {
     @media (width >= 40rem) {
       background-image: url('/01_Kopee_Tailwind/img/background-md-1.png');
@@ -1326,6 +1376,16 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
+  .lg\:bg-\[url\(\'\.\/img\/Background-lg-1\.png\'\)\] {
+    @media (width >= 64rem) {
+      background-image: url('./img/Background-lg-1.png');
+    }
+  }
+  .lg\:bg-\[url\(\'\.\/img\/Background-lg\.png\'\)\] {
+    @media (width >= 64rem) {
+      background-image: url('./img/Background-lg.png');
+    }
+  }
   .lg\:bg-\[url\(\'\/01_Kopee_Tailwind\/img\/Background-lg-1\.png\'\)\] {
     @media (width >= 64rem) {
       background-image: url('/01_Kopee_Tailwind/img/Background-lg-1.png');
@@ -1334,6 +1394,11 @@
   .lg\:bg-\[url\(\'\/01_Kopee_Tailwind\/img\/Background-lg\.png\'\)\] {
     @media (width >= 64rem) {
       background-image: url('/01_Kopee_Tailwind/img/Background-lg.png');
+    }
+  }
+  .lg\:bg-\[url\(\'img\/Background-lg-1\.png\'\)\] {
+    @media (width >= 64rem) {
+      background-image: url('img/Background-lg-1.png');
     }
   }
   .lg\:px-20 {
@@ -1526,6 +1591,11 @@ html {
   inherits: false;
   initial-value: 0 0 #0000;
 }
+@property --tw-outline-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-backdrop-blur {
   syntax: "*";
   inherits: false;
@@ -1628,6 +1698,7 @@ html {
       --tw-ring-offset-width: 0px;
       --tw-ring-offset-color: #fff;
       --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-outline-style: solid;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
